@@ -1,0 +1,515 @@
+/* Meridian Pet Supply — review sample
+   Shared storefront chrome. Editorial, paper and ink. Not a dashboard. */
+
+:root {
+  --paper: #f6f1e8;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --rule: #d6cbb8;
+  --card: #fffdf8;
+  --deep: #2a2622;
+  --focus: #3f5d4a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 0.8rem;
+  top: -4rem;
+  z-index: 20;
+  padding: 0.4rem 0.7rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.skip:focus {
+  top: 0.8rem;
+}
+
+.review-ribbon {
+  background: var(--deep);
+  color: var(--paper);
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.15rem 1.6rem 0.95rem;
+  background: var(--paper);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.mark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.mark:hover {
+  text-decoration: none;
+}
+
+.nav-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem 1.05rem;
+}
+
+.nav-main a,
+.cart-wrap > summary {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.92rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.nav-main a:hover,
+.cart-wrap > summary:hover {
+  text-decoration: underline;
+}
+
+.nav-main a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.cart-wrap {
+  position: relative;
+}
+
+.cart-wrap > summary {
+  list-style: none;
+}
+
+.cart-wrap > summary::-webkit-details-marker {
+  display: none;
+}
+
+.cart-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.7rem);
+  width: min(22rem, calc(100vw - 2rem));
+  z-index: 10;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 1.15rem 1.2rem 1.25rem;
+  box-shadow: 0 10px 28px rgba(28, 25, 23, 0.08);
+}
+
+.cart-panel h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.cart-panel p {
+  margin: 0 0 0.7rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.cart-panel p:last-child {
+  margin-bottom: 0;
+}
+
+main {
+  flex: 1;
+}
+
+.wrap {
+  width: min(72rem, calc(100% - 3.2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 5.4rem 0 3.4rem;
+  text-align: center;
+}
+
+.kicker {
+  margin: 0 0 0.85rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero h1,
+.page-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(2.05rem, 5.4vw, 3.55rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  margin: 1rem auto 0;
+  max-width: 36rem;
+  font-size: 1.12rem;
+  color: var(--muted);
+}
+
+.promise {
+  margin: 1.6rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.actions {
+  margin-top: 1.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.72rem 1.25rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.page-hero {
+  padding: 3.4rem 0 1.6rem;
+}
+
+.page-hero.center {
+  text-align: center;
+}
+
+.note,
+.empty {
+  border: 1px solid var(--rule);
+  background: var(--card);
+  padding: 1.15rem 1.25rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 2.4rem 1.4rem;
+  margin: 0 0 2.4rem;
+}
+
+.empty h2,
+.empty p {
+  margin: 0 0 0.55rem;
+}
+
+.empty p:last-child,
+.empty h2:last-child {
+  margin-bottom: 0;
+}
+
+.section {
+  padding: 2.6rem 0 0.4rem;
+}
+
+.section h2 {
+  margin: 0 0 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+}
+
+.section .deck {
+  margin: 0 0 1.35rem;
+  color: var(--muted);
+  max-width: 40rem;
+}
+
+.grid-4,
+.grid-5,
+.grid-2 {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 1.45rem 1.2rem 1.35rem;
+  text-decoration: none;
+  min-height: 10.5rem;
+  color: var(--ink);
+}
+
+.card:hover {
+  text-decoration: none;
+  border-color: var(--ink);
+}
+
+.card h3,
+.card h2 {
+  margin: 0 0 0.4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 1.35rem;
+}
+
+.territory,
+.card .meta {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.card .go {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.teaser {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 1.5rem;
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.teaser h2 {
+  margin: 0 0 0.45rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.teaser p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 38rem;
+}
+
+.prose {
+  max-width: 40rem;
+  padding-bottom: 3.2rem;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.55rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 1.45rem;
+}
+
+.prose p,
+.prose li {
+  color: var(--deep);
+}
+
+.prose ul {
+  padding-left: 1.2rem;
+}
+
+.house-cue {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 2.6rem;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 2.2rem 0 2.4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+  gap: 1.6rem;
+}
+
+.site-footer h2 {
+  margin: 0 0 0.55rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.site-footer p,
+.site-footer li {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.legal {
+  margin-top: 1.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 980px) {
+  .grid-4,
+  .grid-5,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .header-row,
+  .nav-main,
+  .teaser,
+  .grid-2,
+  .grid-4,
+  .grid-5,
+  .footer-grid {
+    display: block;
+  }
+
+  .nav-main a,
+  .cart-wrap {
+    display: inline-block;
+    margin: 0.25rem 0.85rem 0.25rem 0;
+  }
+
+  .hero {
+    padding: 3.4rem 0 2.2rem;
+  }
+
+  .card,
+  .teaser,
+  .section {
+    margin-bottom: 1rem;
+  }
+
+  .cart-panel {
+    position: static;
+    width: auto;
+    margin-top: 0.7rem;
+    box-shadow: none;
+  }
+}
