@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian Pet Supply</title>
+  <style>
+    :root { --ink:#1c1917; --paper:#f6f1e8; --rule:#d6cbb8; --accent:#3f5d4a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Georgia, "Times New Roman", serif; color:var(--ink); background:var(--paper); }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.6rem; border-bottom:1px solid var(--rule); }
+    .mark { letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; }
+    nav a { margin-left:1.1rem; color:var(--ink); text-decoration:none; font-size:.95rem; }
+    nav a:hover { text-decoration:underline; }
+    .hero { padding:5.5rem 1.6rem 4rem; text-align:center; }
+    .hero h1 { font-size:clamp(2rem,5vw,3.4rem); font-weight:400; margin:0 0 .6rem; }
+    .hero p { margin:0; font-size:1.15rem; letter-spacing:.04em; }
+    .brands { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; padding:0 1.6rem 4rem; max-width:980px; margin:0 auto; }
+    .card { border:1px solid var(--rule); padding:1.4rem 1.1rem; min-height:8.5rem; background:#fffdf8; }
+    .card h2 { margin:0 0 .4rem; font-size:1.25rem; font-weight:400; }
+    .card p { margin:0; font-size:.95rem; line-height:1.4; }
+    footer { border-top:1px solid var(--rule); padding:1rem 1.6rem 1.6rem; font-size:.85rem; color:#57534e; }
+    .note { max-width:980px; margin:0 auto 2rem; padding:0 1.6rem; font-size:.9rem; color:#57534e; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="mark">Meridian Pet Supply</div>
+    <nav>
+      <a href="#rooted">Rooted</a>
+      <a href="#stock">Stock &amp; Steward</a>
+      <a href="#fundamentals">Fundamentals</a>
+      <a href="#good-company">Good Company</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Thoughtfully sourced. Expertly made.</h1>
+    <p>A house of brands. One storefront.</p>
+  </section>
+  <p class="note">Sample for review. Not a live store. Display name is Meridian Pet Supply.</p>
+  <section class="brands">
+    <article class="card" id="rooted"><h2>Rooted</h2><p>Shop by this brand when you want the Rooted line.</p></article>
+    <article class="card" id="stock"><h2>Stock &amp; Steward</h2><p>Shop by this brand when you want the Stock &amp; Steward line.</p></article>
+    <article class="card" id="fundamentals"><h2>Fundamentals</h2><p>Shop by this brand when you want the Fundamentals line.</p></article>
+    <article class="card" id="good-company"><h2>Good Company</h2><p>Shop by this brand when you want the Good Company line.</p></article>
+  </section>
+  <footer>Meridian Pet Supply — review shell only. meridian.com is not available.</footer>
+</body>
+</html>
