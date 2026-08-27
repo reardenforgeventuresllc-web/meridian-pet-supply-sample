@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
 /* Meridian Pet Supply — review sample
    Shared storefront chrome. Editorial, paper and ink. Not a dashboard. */
 
@@ -30,7 +32,7 @@ body {
   flex-direction: column;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
   line-height: 1.55;
 }
@@ -70,7 +72,7 @@ summary:focus-visible {
   background: var(--deep);
   color: var(--paper);
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -93,7 +95,7 @@ summary:focus-visible {
 }
 
 .mark {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -116,7 +118,7 @@ summary:focus-visible {
 
 .nav-main a,
 .cart-wrap > summary {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.92rem;
   color: var(--ink);
   text-decoration: none;
@@ -208,7 +210,7 @@ main {
 
 .kicker {
   margin: 0 0 0.85rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -218,7 +220,7 @@ main {
 .hero h1,
 .page-hero h1 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-weight: 400;
   font-size: clamp(2.05rem, 5.4vw, 3.55rem);
   line-height: 1.12;
@@ -234,7 +236,7 @@ main {
 
 .promise {
   margin: 1.6rem 0 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -254,7 +256,7 @@ main {
   background: var(--ink);
   color: var(--paper);
   text-decoration: none;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.88rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -310,7 +312,7 @@ main {
 
 .section h2 {
   margin: 0 0 0.35rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-weight: 400;
   font-size: clamp(1.45rem, 2.6vw, 1.9rem);
 }
@@ -359,7 +361,7 @@ main {
 .card h3,
 .card h2 {
   margin: 0 0 0.4rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-weight: 400;
   font-size: 1.35rem;
 }
@@ -399,7 +401,7 @@ main {
 
 .teaser h2 {
   margin: 0 0 0.45rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-weight: 400;
   font-size: 1.7rem;
 }
@@ -417,7 +419,7 @@ main {
 
 .prose h2 {
   margin: 2rem 0 0.55rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-weight: 400;
   font-size: 1.45rem;
 }
@@ -451,7 +453,7 @@ main {
 
 .site-footer h2 {
   margin: 0 0 0.55rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Fraunces, Georgia, serif;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -608,4 +610,24 @@ main {
 }
 .site-footer {
   background: #fff8ee;
+}
+
+
+/* Type pass: house, not a brief */
+h1, h2, h3, .mark, .hero h1, .page-hero h1, .section h2, .teaser h2, .card h3 {
+  font-family: Fraunces, Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+.nav-main a,
+.cart-wrap > summary,
+.btn,
+.kicker,
+.territory,
+.card .go,
+.review-ribbon {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+}
+.mark {
+  font-family: Fraunces, Georgia, serif;
 }
