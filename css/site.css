@@ -631,3 +631,20 @@ h1, h2, h3, .mark, .hero h1, .page-hero h1, .section h2, .teaser h2, .card h3 {
 .mark {
   font-family: Fraunces, Georgia, serif;
 }
+
+
+/* Wordmark size */
+.mark {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.55rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.kicker {
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  margin-bottom: 0.55rem;
+}
