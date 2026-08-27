@@ -2,14 +2,14 @@
    Shared storefront chrome. Editorial, paper and ink. Not a dashboard. */
 
 :root {
-  --paper: #f4e6c8;
-  --ink: #2a1f16;
-  --muted: #6b5344;
-  --rule: #e0c9a0;
-  --card: #fff6e8;
-  --deep: #3a2a1e;
-  --focus: #3d6b45;
-  --honey: #c8882a;
+  --paper: #f6ebda;
+  --ink: #3a2a1e;
+  --muted: #6a5344;
+  --rule: #e2c9a4;
+  --card: #fff8ee;
+  --deep: #2f4a38;
+  --focus: #2f4a38;
+  --honey: #c4a06a;
   --clay: #b85a38;
 }
 
@@ -529,4 +529,83 @@ main {
     margin-top: 0.7rem;
     box-shadow: none;
   }
+}
+
+
+/* Home kitchen pass */
+.review-ribbon {
+  background: var(--deep);
+  color: #f6ebda;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+.site-header {
+  background: #fff8ee;
+  border-bottom: 1px solid #ead7b6;
+}
+.mark {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 1.05rem;
+}
+.hero-photo {
+  max-height: none;
+  height: min(72vh, 38rem);
+  object-position: center 60%;
+}
+.hero {
+  padding: 2rem 0 1.6rem;
+  text-align: left;
+}
+.hero .lede {
+  margin-left: 0;
+  max-width: 32rem;
+}
+.btn {
+  background: var(--deep);
+  color: #f6ebda;
+  text-transform: none;
+  letter-spacing: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.35rem;
+}
+.btn-ghost {
+  background: #fff8ee;
+  color: var(--ink);
+  border: 1px solid #c4a06a;
+  border-radius: 999px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.card {
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0 0 1.15rem;
+  box-shadow: 0 10px 28px rgba(58, 42, 30, 0.08);
+  background: #fff8ee;
+}
+.card-photo {
+  width: 100%;
+  margin: 0 0 0.85rem;
+  height: 11.5rem;
+  border-radius: 0;
+}
+.card h3, .card p, .card .territory, .card .go {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+}
+.card .territory {
+  margin-top: 0.15rem;
+  letter-spacing: 0.04em;
+}
+.note, .empty {
+  border: 0;
+  border-radius: 1rem;
+  background: #fff8ee;
+  box-shadow: 0 6px 18px rgba(58, 42, 30, 0.06);
+}
+.site-footer {
+  background: #fff8ee;
 }
